@@ -6,5 +6,5 @@ RUN ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime
 RUN echo "${TZ}" > /etc/timezone
 VOLUME /tmp
 EXPOSE 8761
-ADD ./target/eureka-service-0.1.jar eureka.jar
+ADD ./target/eureka-service.jar eureka.jar
 ENTRYPOINT ["java", "-jar", "/eureka.jar"]
